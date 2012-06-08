@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  lat: MyString
+  long: MyString
+  timestamp: 2012-06-06 23:53:37
+
+two:
+  user_id: 1
+  lat: MyString
+  long: MyString
+  timestamp: 2012-06-06 23:53:37
