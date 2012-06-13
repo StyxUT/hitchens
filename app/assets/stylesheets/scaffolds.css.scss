@@ -1,9 +1,11 @@
 body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px; }
+	  background: #1B1B24;
+	  color: #9391ac;
+	  color: hsla(246,14%,62%,1);
+	  font-family: 'Helvetica Neue', Helvetica, Arial Geneva, sans-serif;
+	  font-size: 13px;
+	  text-align: left;
+	}
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -15,20 +17,29 @@ pre {
   padding: 10px;
   font-size: 11px; }
 
+h1 {
+	color: #1B1B24;
+	color: hsla(247,95%,76%,1); }
+
 a {
-  color: #000;
-  &:visited {
-    color: #666; }
+	color: #B5B4FF;
   &:hover {
-    color: #fff;
-    background-color: #000; } }
+		color: #1B1B24;
+		color: hsla(247,95%,76%,1); } }
 
 div {
-  &.field, &.actions {
+  &.field &.actions {
     margin-bottom: 10px; } }
 
+
+input, select {
+		background-color: hsla(247,40%,70%,.8);
+ 		border: 1.5px solid hsla(247,95%,76%,.8);
+		&:hover {background-color: hsla(247,95%,76%,.8);}	
+		}
+
 #notice {
-  color: green; }
+  color: hsla(247,95%,76%,1); }
 
 .field_with_errors {
   padding: 2px;
