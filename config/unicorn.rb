@@ -1,5 +1,5 @@
 worker_processes 2
-working_directory "/home/eric/Sites/hitchens/"
+working_directory "/home/eric/Sites/hitchens/current/"
 
 # This loads the application in the master process before forking
 # worker processes
@@ -11,13 +11,13 @@ timeout 30
 
 # This is where we specify the socket.
 # We will point the upstream Nginx module to this socket later on
-listen "/home/eric/Sites/hitchens/tmp/sockets/unicorn.sock", :backlog => 64
+listen "/home/eric/Sites/hitchens/current/tmp/sockets/unicorn.sock", :backlog => 64
 
-pid "/home/eric/Sites/hitchens/tmp/pids/unicorn.pid"
+pid "/home/eric/Sites/hitchens/current/tmp/pids/unicorn.pid"
 
 # Set the path of the log files inside the log folder of the hitchens
-stderr_path "/home/eric/Sites/hitchens/log/unicorn.stderr.log"
-stdout_path "/home/eric/Sites/hitchens/log/unicorn.stdout.log"
+stderr_path "/home/eric/Sites/hitchens/current/log/unicorn.stderr.log"
+stdout_path "/home/eric/Sites/hitchens/current/log/unicorn.stdout.log"
 
 before_fork do |server, worker|
 # This option works in together with preload_app true setting
