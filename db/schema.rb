@@ -14,13 +14,13 @@
 ActiveRecord::Schema.define(:version => 20120607055337) do
 
   create_table "geofences", :force => true do |t|
+    t.integer  "user_id",    :null => false
     t.integer  "region",     :null => false
     t.string   "lat",        :null => false
     t.string   "long",       :null => false
     t.integer  "radius",     :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "user_id"
   end
 
   create_table "user_locations", :force => true do |t|
