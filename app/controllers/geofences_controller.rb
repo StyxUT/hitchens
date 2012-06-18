@@ -39,7 +39,7 @@ class GeofencesController < ApplicationController
   end
 
   # POST /geofences
-  # POST /geofences.json  curl -H "Content-Type:application/json" -H "Accept:application/json" -X POST -d '{"geofence":{"user_id":1,"region":888,"lat":901,"long":101,"radius":101}}' http://localhost:3000/geofences
+  # POST /geofences.json  curl -H "Content-Type:application/json" -H "Accept:application/json" -X POST -d '{"geofence":{"user_id":1,"region":888,"lat":901,"long":101,"radius":101}}' http://hitchens.herokuapp.com/geofences
   def create
     @geofence = Geofence.new(params[:geofence])
 
