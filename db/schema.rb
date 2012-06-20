@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20120607055337) do
     t.integer  "user_id",    :null => false
     t.string   "lat",        :null => false
     t.string   "long",       :null => false
-    t.time     "timestamp",  :null => false
+    t.datetime "timestamp",  :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
