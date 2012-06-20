@@ -18,7 +18,7 @@ class GeofencesControllerTest < ActionController::TestCase
 
   test "should create geofence" do
     assert_difference('Geofence.count') do
-      post :create, geofence: { lat: @geofence.lat, long: @geofence.long, radius: @geofence.radius, region: @geofence.region }
+      post :create, geofence: {user_id: @geofence.user_id, lat: @geofence.lat, long: @geofence.long, radius: @geofence.radius, region: @geofence.region }
     end
 
     assert_redirected_to geofence_path(assigns(:geofence))
@@ -35,7 +35,7 @@ class GeofencesControllerTest < ActionController::TestCase
   end
 
   test "should update geofence" do
-    put :update, id: @geofence, geofence: { lat: @geofence.lat, long: @geofence.long, radius: @geofence.radius, region: @geofence.region }
+    put :update, id: @geofence, geofence: {user_id: @geofence.user_id, lat: @geofence.lat, long: @geofence.long, radius: @geofence.radius, region: @geofence.region }
     assert_redirected_to geofence_path(assigns(:geofence))
   end
 
