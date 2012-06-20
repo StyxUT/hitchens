@@ -7,7 +7,7 @@ one:
   timestamp: 2012-06-06 23:53:37
 
 two:
-  user_id: 1
+  user_id: 2
   lat: MyString
   long: MyString
   timestamp: 2012-06-06 23:53:37
