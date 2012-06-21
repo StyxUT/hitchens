@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-=======
 
-development:
-  adapter: postgresql
-  database: hitchens
-  pool: 5
-  host: localhost
->>>>>>> send_method
 
 development:
     adapter: postgresql
@@ -19,7 +11,6 @@ development:
                  
 test:
     adapter: postgresql
-<<<<<<< HEAD
     encoding: unicode
     database: hitchens_test
     host: localhost
@@ -34,14 +25,4 @@ production:
     pool: 5
     username: styxut
     password:   
-=======
-    database: test_hitchens
-    pool: 5
-    host: localhost
 
-production:
-    adapter: postgresql
-    database: hitchens
-    pool: 5
-    host: localhost
->>>>>>> send_method
