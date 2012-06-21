@@ -4,10 +4,12 @@ one:
   user_id: 1
   lat: MyString
   long: MyString
+  send_method: curl
   timestamp: 2012-06-06 23:53:37
 
 two:
   user_id: 2
   lat: MyString
   long: MyString
+  send_method: "curl or some other method"
   timestamp: 2012-06-06 23:53:37

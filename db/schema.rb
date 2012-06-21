@@ -24,22 +24,13 @@ ActiveRecord::Schema.define(:version => 20120620215942) do
   end
 
   create_table "user_locations", :force => true do |t|
-<<<<<<< HEAD
-    t.integer  "user_id",    :null => false
-    t.string   "lat",        :null => false
-    t.string   "long",       :null => false
-    t.datetime "timestamp",  :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-=======
     t.integer  "user_id",     :null => false
     t.string   "lat",         :null => false
     t.string   "long",        :null => false
-    t.time     "timestamp",   :null => false
+    t.datetime "timestamp",   :null => false
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "send_method"
->>>>>>> send_method
   end
 
   create_table "users", :force => true do |t|

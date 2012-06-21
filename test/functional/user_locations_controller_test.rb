@@ -35,7 +35,7 @@ class UserLocationsControllerTest < ActionController::TestCase
   end
 
   test "should update user_location" do
-    put :update, id: @user_location, user_location: {user_id: @user_location.user_id, lat: @user_location.lat, long: @user_location.long, timestamp: @user_location.timestamp, user_id: @user_location.user_id }
+    put :update, id: @user_location, user_location: {user_id: @user_location.user_id, lat: @user_location.lat, long: @user_location.long, timestamp: @user_location.timestamp, user_id: @user_location.user_id, send_method: @user_location.send_method}
     assert_redirected_to user_location_path(assigns(:user_location))
   end
 

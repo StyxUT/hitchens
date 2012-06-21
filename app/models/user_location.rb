@@ -1,3 +1,3 @@
 class UserLocation < ActiveRecord::Base
-  attr_accessible :lat, :long, :timestamp, :user_id
+  attr_accessible :user_id, :lat, :long, :send_method, :timestamp
 end

@@ -5,6 +5,7 @@
     <th>User</th>
     <th>Lat</th>
     <th>Long</th>
+    <th>Send Method</th>
     <th>Timestamp</th>
     <th></th>
     <th></th>
@@ -16,6 +17,7 @@
     <td><%= user_location.user_id %></td>
     <td><%= user_location.lat %></td>
     <td><%= user_location.long %></td>
+    <td><%= user_location.send_method %></td> 
     <td><%= user_location.timestamp %></td>
     <td><%= link_to 'Show', user_location %></td>
     <td><%= link_to 'Edit', edit_user_location_path(user_location) %></td>
