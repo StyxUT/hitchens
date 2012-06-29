@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  virus_id: 1
+  characteristic_id: 1
+  value: 1
+
+two:
+  virus_id: 1
+  characteristic_id: 1
+  value: 1

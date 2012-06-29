@@ -1,0 +1,21 @@
+<%= form_for(@virus) do |f| %>
+  <% if @virus.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@virus.errors.count, "error") %> prohibited this virus from being saved:</h2>
+
+      <ul>
+      <% @virus.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

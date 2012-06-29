@@ -1,0 +1,32 @@
+Plural version of the model detected, using singularized version. Override with --force-plural.
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20120629052730_create_viruses.rb
+[1m[32m      create[0m    app/models/viruse.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/unit/viruse_test.rb
+[1m[32m      create[0m      test/fixtures/viruses.yml
+[1m[37m      invoke[0m  resource_route
+[1m[32m       route[0m    resources :viruses
+[1m[37m      invoke[0m  scaffold_controller
+[1m[32m      create[0m    app/controllers/viruses_controller.rb
+[1m[37m      invoke[0m    erb
+[1m[32m      create[0m      app/views/viruses
+[1m[32m      create[0m      app/views/viruses/index.html.erb
+[1m[32m      create[0m      app/views/viruses/edit.html.erb
+[1m[32m      create[0m      app/views/viruses/show.html.erb
+[1m[32m      create[0m      app/views/viruses/new.html.erb
+[1m[32m      create[0m      app/views/viruses/_form.html.erb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/functional/viruses_controller_test.rb
+[1m[37m      invoke[0m    helper
+[1m[32m      create[0m      app/helpers/viruses_helper.rb
+[1m[37m      invoke[0m      test_unit
+[1m[32m      create[0m        test/unit/helpers/viruses_helper_test.rb
+[1m[37m      invoke[0m  assets
+[1m[37m      invoke[0m    coffee
+[1m[32m      create[0m      app/assets/javascripts/viruses.js.coffee
+[1m[37m      invoke[0m    scss
+[1m[32m      create[0m      app/assets/stylesheets/viruses.css.scss
+[1m[37m      invoke[0m  scss
+[1m[31m    conflict[0m    app/assets/stylesheets/scaffolds.css.scss
+  Overwrite /Users/StyxUT/Sites/dev/projects/hitchens/app/assets/stylesheets/scaffolds.css.scss? (enter "h" for help) [Ynaqdh] 

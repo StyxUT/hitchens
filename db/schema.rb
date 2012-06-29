@@ -11,25 +11,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120620215942) do
+ActiveRecord::Schema.define(:version => 20120629054828) do
+
+  create_table "characteristics", :force => true do |t|
+    t.string   "name",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "geofences", :force => true do |t|
-    t.integer  "user_id",    :null => false
     t.integer  "region",     :null => false
     t.string   "lat",        :null => false
     t.string   "long",       :null => false
     t.integer  "radius",     :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
 
   create_table "user_locations", :force => true do |t|
-    t.integer  "user_id",     :null => false
     t.string   "lat",         :null => false
     t.string   "long",        :null => false
     t.datetime "timestamp",   :null => false
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "user_id"
     t.string   "send_method"
   end
 
@@ -37,6 +43,21 @@ ActiveRecord::Schema.define(:version => 20120620215942) do
     t.string   "device_id",  :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "virus_characteristics", :force => true do |t|
+    t.integer  "value",             :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "virus_id"
+    t.integer  "characteristic_id"
+  end
+
+  create_table "viruses", :force => true do |t|
+    t.string   "name",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
 
 end

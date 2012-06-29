@@ -1,4 +1,10 @@
 Hitchens::Application.routes.draw do
+  resources :viruses
+
+  resources :virus_characteristics
+
+  resources :characteristics
+
   resources :user_locations
 
   resources :users

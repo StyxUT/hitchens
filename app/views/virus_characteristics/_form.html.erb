@@ -1,0 +1,29 @@
+<%= form_for(@virus_characteristic) do |f| %>
+  <% if @virus_characteristic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@virus_characteristic.errors.count, "error") %> prohibited this virus_characteristic from being saved:</h2>
+
+      <ul>
+      <% @virus_characteristic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :virus_id %><br />
+    <%= f.number_field :virus_id %>
+  </div>
+  <div class="field">
+    <%= f.label :characteristic_id %><br />
+    <%= f.number_field :characteristic_id %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br />
+    <%= f.number_field :value %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
