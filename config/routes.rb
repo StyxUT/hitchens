@@ -5,8 +5,12 @@ Hitchens::Application.routes.draw do
 
   resources :characteristics
 
-  resources :user_locations
-
+  resources :user_locations do
+      collection do
+          delete 'delete_all'
+      end
+  end
+  
   resources :users
 
   resources :geofences

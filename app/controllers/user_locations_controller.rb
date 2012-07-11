@@ -39,7 +39,7 @@ class UserLocationsController < ApplicationController
   end
 
   # POST /user_locations
-  # POST /user_locations.json   curl -H "Content-Type:application/json" -H "Accept:application/json" -X POST -d '{"user_location":{"user_id":1,"long":103,"lat":103, "send_method":"curl","timestamp":"2012-06-06 11:55:00"}}' http://hitchens.herokuapp.com/user_locations
+  # POST /user_locations.json   curl -H "Content-Type:application/json" -H "Accept:application/json" -X POST -d '{"user_location":{"user_id":1,"long":103,"lat":103, "send_method":"curl","timestamp":"2012-06-06 11:55:00 +000"}}' http://hitchens.herokuapp.com/user_locations
   def create
     @user_location = UserLocation.new(params[:user_location])
 
@@ -81,4 +81,15 @@ class UserLocationsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # DELETE all
+  def delete_all
+    UserLocation.delete_all
+    
+    respond_to do |format|
+      format.html { redirect_to user_locations_url }
+      format.json { head :no_content }
+    end
+  end
+     
 end
