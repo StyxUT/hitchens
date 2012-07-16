@@ -1,3 +1,15 @@
+header
+{
+	color: #1B1B24;
+	color: hsla(247,95%,76%,1);
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+	font-size: 5px;
+	margin: -7px;
+	margin-bottom: 0px;
+}
+
 body {
 	  background: #1B1B24;
 	  color: #9391ac;
@@ -7,7 +19,7 @@ body {
 	  text-align: left;
 	}
 
-p, ol, ul, td {
+p, ol, ul {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px; }
@@ -31,6 +43,19 @@ div {
   &.field &.actions {
     margin-bottom: 10px; } }
 
+table {
+	border: 1.5px solid hsla(247,95%,76%,.8);
+	}
+	
+tr {text-align: center;
+	&.header{font-weight: bold;}
+	}
+
+td {
+		text-align: center;
+		border: 1px solid hsla(247,95%,76%,.8);
+		padding: 3px;
+		}
 
 input, select {
 		background-color: hsla(247,40%,70%,.8);

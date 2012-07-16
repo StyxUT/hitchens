@@ -1,32 +1,28 @@
-<h1>Listing user_locations</h1>
-
-<div class="delete_all"><%= link_to t('delete_all'), delete_all_user_locations_path, confirm: 'Are you sure?', :method => :delete %></div>
+<header>
+		<p>User Locations</p>
+</header>
+<div> <%= link_to t('delete_all'), delete_all_user_locations_path, confirm: 'Delete all user locations?', :method => :delete %></div>
+<br />
 <table>
-  <tr>
-    <th>User</th>
-    <th>Lat</th>
-    <th>Long</th>
-    <th>Send Method</th>
-    <th>Timestamp</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @user_locations.each do |user_location| %>
-  <tr>
-    <td><%= user_location.user_id %></td>
-    <td><%= user_location.lat %></td>
-    <td><%= user_location.long %></td>
-    <td><%= user_location.send_method %></td> 
-    <td><%= user_location.timestamp %></td>
-    <td><%= link_to 'Show', user_location %></td>
-    <td><%= link_to 'Edit', edit_user_location_path(user_location) %></td>
-    <td><%= link_to 'Destroy', user_location, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+		<tr class=header>
+			<td>
+				User id
+			</td>
+			<td>
+				Longitude
+			</td>
+			<td>
+				Latitude
+			</td>
+			<td>
+				Send Method
+			</td>
+			<td>
+				Time Stamp
+			</td>
+		</tr>
+<%= render @user_locations %>
 </table>
-
 <br />
 
 <%= link_to 'New User location', new_user_location_path %>
