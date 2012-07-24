@@ -1,10 +1,6 @@
 Hitchens::Application.routes.draw do
   resources :viruses
 
-  resources :virus_characteristics
-
-  resources :characteristics
-
   resources :user_locations do
       collection do
           delete 'delete_all'
@@ -12,8 +8,6 @@ Hitchens::Application.routes.draw do
   end
   
   resources :users
-
-  resources :geofences
   
   root :to => "users#index"
 

@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base  
-    has_many :geofences, :dependent => :destroy
     has_many :viruses, :dependent => :destroy
     has_many :user_locations, :dependent => :destroy  
     
