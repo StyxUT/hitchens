@@ -1,27 +1,37 @@
 
 
 development:
-    adapter: postgresql
-    encoding: unicode
-    database: hitchens_development
-    host: localhost
-    pool: 5
-    username: styxut
-    password:             
+  adapter: postgis
+  schema_search_path: 'public,postgis'  
+  script_dir: '/Applications/Postgres.app/Contents/MacOS/share/contrib/postgis-2.0/'
+  postgis_extension: true
+  encoding: unicode
+  database: hitchens_development
+  host: localhost  
+  pool: 5
+  username: styxut
+  password:      
                  
 test:
-    adapter: postgresql
+    adapter: postgis
+    schema_search_path: 'public,postgis'  
+    script_dir: '/Applications/Postgres.app/Contents/MacOS/share/contrib/postgis-2.0/'
+    postgis_extension: true
     encoding: unicode
     database: hitchens_test
-    host: localhost
+    host: localhost  
     pool: 5
     username: styxut
-    password:   
+    password: 
 
 production:
-    adapter: postgresql
+    adapter: postgis
+    schema_search_path: 'public,postgis'  
+    script_dir: '/Applications/Postgres.app/Contents/MacOS/share/contrib/postgis-2.0/'
+    postgis_extension: true
     encoding: unicode
-    database: hitchens_production
+    database: hitchens
+    host: localhost  
     pool: 5
     username: styxut
     password:   

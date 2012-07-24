@@ -6,6 +6,9 @@ gem 'rails', '3.2.5'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'activerecord-postgis-adapter'
+gem 'rgeo-shapefile'
+gem 'squeel'
 
 # Gems used only for assets and not required
 # in production environments by default.
