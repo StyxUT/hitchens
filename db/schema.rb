@@ -14,11 +14,10 @@
 ActiveRecord::Schema.define(:version => 20120628054828) do
 
   create_table "user_locations", :force => true do |t|
-    t.string   "lat",         :null => false
-    t.string   "long",        :null => false
-    t.datetime "timestamp",   :null => false
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.spatial  "latlon",      :limit => {:srid=>4326, :type=>"point", :geographic=>true}
+    t.datetime "timestamp",                                                               :null => false
+    t.datetime "created_at",                                                              :null => false
+    t.datetime "updated_at",                                                              :null => false
     t.integer  "user_id"
     t.string   "send_method"
   end

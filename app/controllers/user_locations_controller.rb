@@ -39,7 +39,7 @@ class UserLocationsController < ApplicationController
   end
 
   # POST /user_locations
-  # POST /user_locations.json   curl -H "Content-Type:application/json" -H "Accept:application/json" -X POST -d '{"user_location":{"user_id":1,"long":103,"lat":103, "send_method":"curl","timestamp":"2012-06-06 11:55:00 +000"}}' http://hitchens.herokuapp.com/user_locations
+  # POST /user_locations.json   curl -H "Content-Type:application/json" -H "Accept:application/json" -X POST -d '{"user_location":{"user_id":1,"latlon":"POINT(-124.123456 44.123456)", "send_method":"curl","timestamp":"2012-06-06 11:55:00 +000"}}' http://localhost:5000/user_locations
   def create
     @user_location = UserLocation.new(params[:user_location])
 

@@ -18,7 +18,7 @@ class UserLocationsControllerTest < ActionController::TestCase
 
   test "should create user_location" do
     assert_difference('UserLocation.count') do
-      post :create, user_location: {user_id: @user_location.user_id, lat: @user_location.lat, long: @user_location.long, send_method: @user_location.send_method, timestamp: @user_location.timestamp }
+      post :create, user_location: {user_id: @user_location.user_id, latlon: @user_location.latlon, send_method: @user_location.send_method, timestamp: @user_location.timestamp }
     end
 
     assert_redirected_to user_location_path(assigns(:user_location))
@@ -35,7 +35,7 @@ class UserLocationsControllerTest < ActionController::TestCase
   end
 
   test "should update user_location" do
-    put :update, id: @user_location, user_location: {user_id: @user_location.user_id, lat: @user_location.lat, long: @user_location.long, send_method: @user_location.send_method, timestamp: @user_location.timestamp }
+    put :update, id: @user_location, user_location: {user_id: @user_location.user_id, latlon: @user_location.latlon, send_method: @user_location.send_method, timestamp: @user_location.timestamp }
     assert_redirected_to user_location_path(assigns(:user_location))
   end
 

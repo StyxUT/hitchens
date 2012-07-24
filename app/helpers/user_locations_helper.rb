@@ -3,8 +3,7 @@ module UserLocationsHelper
     def user_locations_links(user_location)
             content_tag :tr do
                 [   content_tag(:td, user_location.user_id), 
-                    content_tag(:td, user_location.long), 
-                    content_tag(:td, user_location.lat), 
+                    content_tag(:td, user_location.latlon), 
                     content_tag(:td, user_location.send_method), 
                     content_tag(:td, user_location.timestamp),
                     content_tag(:td, link_to_icon('show', user_location)), 
