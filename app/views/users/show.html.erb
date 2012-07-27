@@ -1,10 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Device:</b>
-  <%= @user.device_id %>
+	<p>
+	  <b>User ID:</b>
+	  <%= @user.id %>
+	</p>
+	<p>
+	<b>Device:</b>
+	  <%= @user.device_id %>
+	</p>
+	<p>
+	  <b>Created At:</b>
+	  <%= @user.created_at %>
+	</p>
 </p>
-
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

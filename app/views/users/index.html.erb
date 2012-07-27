@@ -1,7 +1,8 @@
-<h1>Listing users</h1>
+<h1>Users</h1>
 
 <table>
   <tr>
+    <th>User ID</th>
     <th>Device</th>
     <th></th>
     <th></th>
@@ -10,10 +11,11 @@
 
 <% @users.each do |user| %>
   <tr>
+    <td><%= user.id %></td>
     <td><%= user.device_id %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to_icon 'Show', user %></td>
+    <td><%= link_to_icon 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to_icon 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -26,3 +28,5 @@
 <%= link_to 'User Locations', user_locations_path %>
 <br />
 <%= link_to 'Viruses', viruses_path %>
+<br />
+<%= link_to 'Characteristics', characteristics_path %>

@@ -1,8 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
-  <%= @virus.name %>
+	<p>
+	  <b>Virus ID:</b>
+	  <%= @virus.id %>
+	</p>
+	<p>
+	<b>Name:</b>
+	  <%= @virus.name %>
+	</p>
+	<p>
+	  <b>Created By:</b>
+	  <%= @virus.user_id %>
+	</p>
+	<p>
+	  <b>Created At:</b>
+	  <%= @virus.created_at %>
+	</p>
 </p>
 
 

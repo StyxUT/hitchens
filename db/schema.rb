@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120628054828) do
+ActiveRecord::Schema.define(:version => 20120727165138) do
+
+  create_table "characteristics", :force => true do |t|
+    t.string   "characteristic", :null => false
+    t.string   "description",    :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "user_locations", :force => true do |t|
     t.spatial  "latlon",      :limit => {:srid=>4326, :type=>"point", :geographic=>true}

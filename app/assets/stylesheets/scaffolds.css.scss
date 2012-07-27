@@ -55,7 +55,15 @@ td {
 		text-align: center;
 		border: 1px solid hsla(247,95%,76%,.8);
 		padding: 3px;
+		&.left{text-align: left;}
 		}
+		
+th {
+		text-align: center;
+		border: 1px solid hsla(247,95%,76%,.8);
+		padding: 3px;
+		font-weight: bold;
+	}
 
 input, select {
 		background-color: hsla(247,40%,70%,.8);
