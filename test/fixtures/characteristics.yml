@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  characteristic: MyString
-  description: MyString
+  characteristic: "Characteristic 1"
+  description: "Description for Characteristic 1"
 
 two:
-  characteristic: MyString
-  description: MyString
+  characteristic: "Characteristic 2"
+  description: "Description for Characteristic 2"

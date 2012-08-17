@@ -18,7 +18,7 @@ class VirusesControllerTest < ActionController::TestCase
 
   test "should create virus" do
     assert_difference('Virus.count') do
-      post :create, virus: { name: @virus.name }
+      post :create, virus: { user_id: @virus.user_id, name: @virus.name }
     end
 
     assert_redirected_to virus_path(assigns(:virus))

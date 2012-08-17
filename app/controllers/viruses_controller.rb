@@ -39,7 +39,7 @@ class VirusesController < ApplicationController
   end
 
   # POST /viruses
-  # POST /viruses.json
+  # POST /viruses.json  curl -H "Content-Type:application/json" -H "Accept:application/json" -X POST -d '{"virus":{"user_id":1,"name":"CurlTestVirus"}}' http://localhost:5000/viruses
   def create
     @virus = Virus.new(params[:virus])
 

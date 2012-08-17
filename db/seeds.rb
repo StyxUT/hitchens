@@ -7,11 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 [
-    {:characteristic => "Virulence", :description => "The relative ability of a microorganism to causedisease; degree of pathogenicity."},
-    {:characteristic => "Latent Period", :description => "The time between becoming infected and becoming infectious."},
-    {:characteristic => "Lethality", :description => "The likelihood of causing death."},
-    {:characteristic => "Transmission Routes", :description => "The modes of transmitting the virus.  (i.e. touch, Food, vector, fomites)"},
-    {:characteristic => "Infectious Period", :description => "The duration of contagiousnes."},
+    {:id => 1, :characteristic => "Virulence", :description => "The relative ability of a microorganism to causedisease; degree of pathogenicity."},
+    {:id => 2, :characteristic => "Latent Period", :description => "The time between becoming infected and becoming infectious."},
+    {:id => 3, :characteristic => "Lethality", :description => "The likelihood of causing death."},
+    {:id => 4, :characteristic => "Transmission Routes", :description => "The modes of transmitting the virus.  (i.e. touch, Food, vector, fomites)"},
+    {:id => 5, :characteristic => "Infectious Period", :description => "The duration of contagiousnes."},
 ].each do |attributes|
     Characteristic.find_or_create_by_characteristic(attributes)
 end

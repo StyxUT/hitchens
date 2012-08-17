@@ -1,7 +1,11 @@
 class Virus < ActiveRecord::Base 
-  belongs_to :user 
-  attr_accessible :name
+  has_many :virus_characteristics
+  has_many :characteristics, :through => :virus_characteristics
   
-  validates :name, :presence => true  
+  belongs_to :user 
+  attr_accessible :user_id, :name
+  
+  validates :name, :presence => true, :uniqueness => true
+  validates :user_id, :presence => true
 end
                                                              

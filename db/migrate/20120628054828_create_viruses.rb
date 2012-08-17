@@ -1,11 +1,10 @@
 class CreateViruses < ActiveRecord::Migration
   def change
-    create_table :viruses do |t|
+     create_table :viruses do |t|
+      t.references :user
       t.string :name, :null => false
 
       t.timestamps
-      
-      t.references :user
     end
   end
 end

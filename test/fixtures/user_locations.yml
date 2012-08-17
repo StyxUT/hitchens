@@ -2,12 +2,12 @@
 
 one:
   user_id: 1
-  latlon: "POINT(-125.123456 45.123456)"
+  latlon: "SRID=3785;POINT(-125.123456 45.123456)"
   send_method: test1
   timestamp: 2012-06-06 23:53:37
 
 two:
   user_id: 2
-  latlon: "POINT(-125.123456 45.123456)" 
+  latlon: "SRID=3785;POINT(-125.123456 45.123456)" 
   send_method: "test2"
   timestamp: 2012-06-07 23:53:37

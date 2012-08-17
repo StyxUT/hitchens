@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Virus:</b>
+  <%= @virus_characteristic.virus_id %>
+</p>
+
+<p>
+  <b>Characteristic:</b>
+  <%= @virus_characteristic.characteristic_id %>
+</p>
+
+<p>
+  <b>Characteristic level:</b>
+  <%= @virus_characteristic.characteristic_level %>
+</p>
+
+
+<%= link_to 'Edit', edit_virus_characteristic_path(@virus_characteristic) %> |
+<%= link_to 'Back', virus_characteristics_path %>

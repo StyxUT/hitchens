@@ -1,4 +1,7 @@
 Hitchens::Application.routes.draw do
+
+  resources :virus_characteristics
+
   resources :characteristics
 
   resources :viruses
@@ -10,6 +13,8 @@ Hitchens::Application.routes.draw do
   end
   
   resources :users
+  
+  resource :virus_characteristics
   
   root :to => "users#index"
 

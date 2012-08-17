@@ -39,7 +39,7 @@ class UsersController < ApplicationController
   end
 
   # POST /users
-  # POST /users.json  curl -H "Content-Type:application/json" -H "Accept:application/json" -X POST -d '{"user":{"device_id":"x1"}}' http://hitchens.herokuapp.com/users
+  # POST /users.json  curl -H "Content-Type:application/json" -H "Accept:application/json" -X POST -d '{"user":{"device_id":"x111"}}' http://localhost:5000/users
   def create
     @user = User.new(params[:user])
 

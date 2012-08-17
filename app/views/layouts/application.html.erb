@@ -7,7 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<p>
+	<%= link_to "Users", users_path %> | <%= link_to "User Locations", user_locations_path %> | <%= link_to "Viruses", viruses_path %> | <%= link_to "Characteristics", characteristics_path %> | <%= link_to "Virus Characteristics", virus_characteristics_path %>
+</p>
 <%= yield %>
 
 </body>

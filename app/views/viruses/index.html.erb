@@ -3,10 +3,8 @@
 <table>
   <tr>
     <th>ID</th>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Virus Name</th>
+		<th><th>
   </tr>
 
 <% @viruses.each do |virus| %>
@@ -19,14 +17,5 @@
   </tr>
 <% end %>
 </table>
-
 <br />
-
-<%= link_to 'New Virus', new_virus_path %>
-<br />
-<br />
-<%= link_to 'Users', users_path %>
-<br />
-<%= link_to 'User Locations', user_locations_path %>
-<br />
-<%= link_to 'Characteristics', characteristics_path %>
+<%= link_to "New Virus", new_virus_path%>

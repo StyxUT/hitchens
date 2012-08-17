@@ -4,5 +4,5 @@ class User < ActiveRecord::Base
     
     attr_accessible :device_id               
     
-    validates :device_id, :presence => true
+    validates :device_id, :presence => true, :uniqueness => true
 end

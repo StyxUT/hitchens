@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120727165138) do
+ActiveRecord::Schema.define(:version => 20120814225308) do
 
   create_table "characteristics", :force => true do |t|
     t.string   "characteristic", :null => false
@@ -21,13 +21,15 @@ ActiveRecord::Schema.define(:version => 20120727165138) do
   end
 
   create_table "user_locations", :force => true do |t|
-    t.spatial  "latlon",      :limit => {:srid=>4326, :type=>"point", :geographic=>true}
-    t.datetime "timestamp",                                                               :null => false
-    t.datetime "created_at",                                                              :null => false
-    t.datetime "updated_at",                                                              :null => false
     t.integer  "user_id"
+    t.datetime "timestamp",                                            :null => false
+    t.datetime "created_at",                                           :null => false
+    t.datetime "updated_at",                                           :null => false
+    t.spatial  "latlon",      :limit => {:srid=>3785, :type=>"point"}
     t.string   "send_method"
   end
+
+  add_index "user_locations", ["latlon"], :name => "index_user_locations_on_latlon", :spatial => true
 
   create_table "users", :force => true do |t|
     t.string   "device_id",  :null => false
@@ -35,11 +37,19 @@ ActiveRecord::Schema.define(:version => 20120727165138) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "virus_characteristics", :force => true do |t|
+    t.integer  "characteristic_id"
+    t.integer  "virus_id"
+    t.integer  "characteristic_level", :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+  end
+
   create_table "viruses", :force => true do |t|
+    t.integer  "user_id"
     t.string   "name",       :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "user_id"
   end
 
 end

@@ -1,7 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  device_id: MyString
+    device_id: "Device_id1"
 
 two:
-  device_id: MyString
+    device_id: "Device_id2"
+
+three:
+    device_id: "something 3"
